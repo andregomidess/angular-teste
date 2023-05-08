@@ -26,6 +26,7 @@ export class CursosComponent implements OnInit, OnDestroy {
   }
   ngOnInit(): void {
     this.cursos = this.CursosService.getCursos();
+    console.log(this.cursos);
     this.inscricao = this.route.queryParams.subscribe((queryParams: any) => {
       this.pagina = queryParams['pagina'];
   });
