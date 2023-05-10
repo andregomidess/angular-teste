@@ -16,9 +16,12 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { CursoDetalherComponent } from './cursos/curso-detalher/curso-detalher.component';
 import { CursosService } from './cursos/cursos.service';
-import { CursosModule } from './cursos/cursos.module';
+//import { CursosModule } from './cursos/cursos.module';
 import { AlunosComponent } from './alunos/alunos.component';
-import { AlunosModule } from './alunos/alunos.module';
+//import { AlunosModule } from './alunos/alunos.module';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './login/auth.service';
 //import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 
 
@@ -35,14 +38,15 @@ import { AlunosModule } from './alunos/alunos.module';
     BrowserModule,
     AppRoutingModule,
     MatSlideToggleModule,
-    CursosModule,
-    AlunosModule,
+    //CursosModule,
+    //AlunosModule,
     //routing,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
   ],
-  providers: [CursosService],
+  providers: [CursosService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

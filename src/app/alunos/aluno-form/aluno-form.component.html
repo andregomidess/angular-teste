@@ -1,1 +1,13 @@
-<p>aluno-form works!</p>
+<form class="mt-4 pt-1">
+  <div class="form-row ">
+    <div>
+      <input type="number" class="form-control" placeholder="id" name="aluno.id" [(ngModel)]="aluno.id" disabled="true">
+    </div>
+    <div>
+      <input type="text" class="form-control" placeholder="Nome" name="aluno.nome" [(ngModel)]="aluno.nome">
+    </div>
+    <div>
+      <input type="text" class="form-control" placeholder="E-mail" name="aluno.email"  [(ngModel)]="aluno.email">
+    </div>
+  </div>
+</form>
