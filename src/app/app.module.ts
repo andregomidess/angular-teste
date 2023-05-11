@@ -22,6 +22,9 @@ import { AlunosComponent } from './alunos/alunos.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth-guard.service';
+import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 //import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 
 
@@ -46,7 +49,7 @@ import { AuthService } from './login/auth.service';
     MatMenuModule,
     FormsModule,
   ],
-  providers: [CursosService, AuthService],
+  providers: [CursosService, AuthService, AuthGuard, CursosGuard, AlunosGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

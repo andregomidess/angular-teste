@@ -11,7 +11,7 @@ export class AuthService {
 
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {  }
 
   fazerLogin(usuario: Usuario) {
 
@@ -26,4 +26,8 @@ export class AuthService {
       this.mostrarMenuEmitter.emit(false);
     }
   }
+
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
+   }
 }

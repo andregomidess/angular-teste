@@ -4,7 +4,7 @@
       <input type="number" class="form-control" placeholder="id" name="aluno.id" [(ngModel)]="aluno.id" disabled="true">
     </div>
     <div>
-      <input type="text" class="form-control" placeholder="Nome" name="aluno.nome" [(ngModel)]="aluno.nome">
+      <input type="text" class="form-control" placeholder="Nome" name="aluno.nome" [(ngModel)]="aluno.nome" (input)="onInput()">
     </div>
     <div>
       <input type="text" class="form-control" placeholder="E-mail" name="aluno.email"  [(ngModel)]="aluno.email">
